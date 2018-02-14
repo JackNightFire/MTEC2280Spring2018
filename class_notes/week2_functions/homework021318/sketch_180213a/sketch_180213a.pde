@@ -1,26 +1,25 @@
 void setup(){
   size(700, 700);
   
-}
-
-
-void draw(){
-
+  frameRate(2);
 }
 
 int keyBrd = 1;
-
+int colorValue = 0;
 
 
 void keyPressed(){
   println(key);
   
-  //Change the stroke width of the figure from 1 - 10, where '0' is strokeWeight(10).
+  
+  //Change the stroke width of the figure;
   if(key == '='){
+    println(keyBrd);
     text( keyBrd, 50, 50);
     strokeWeight (keyBrd ++);
   } else if ( key =='-'){
     if(keyBrd > 0){
+      println(keyBrd);
       strokeWeight( keyBrd--);
     } else if (keyBrd < 0){
       text( "Stroke can not be negative", width / 4, height/4);
@@ -29,51 +28,71 @@ void keyPressed(){
   
 //Assign RGB colors to "r","g","b" for the STROKE
   if(key == 'r'){
-    stroke(255,0,0);
+    stroke(colorValue,0,0);
   } else if(key == 'g'){
-    stroke(0,255,0);
+    stroke(0,colorValue,0);
   } else if(key == 'b'){
-    stroke(0,0,255);
+    stroke(0,0,colorValue);
   }
   
   //Draw a red figure to fill with red->'t' , green->'h', blue->'n'
   if(key == 't'){
-    fill (255,0,0);
+    fill (colorValue,0,0);
     //if (key == 's'){
     //  rect(mouseX ,mouseY , 100,100);
     //}else if(key == 'e'){
     //  ellipse( width/2, height/2, 100, 100);
     //}
   } else if(key == 'h'){
-    fill (0,255,0);
+    fill (0,colorValue,0);
     //if (key == 's'){
     //  rect(width/2 ,width/2 , 100,100);
     //}else if(key == 'e'){
     //  ellipse( width/2, height/2, 100, 100);
     
   } else if(key == 'n'){
-    fill (0,0,255);
+    fill (0,0,colorValue);
     //if (key == 's'){
     //  rect(width/2 ,width/2 , 100,100);
     //}else if(key == 'e'){
     //  ellipse( width/2, height/2, 100, 100);
     //}
   } 
-  
-  //Choose to draw a square or a circle by pressing "s" and "e"
-  if(key == 's'){
-    rect(mouseX, mouseY, 100, 100);
-  } else if(key == 'e'){
-    ellipse(mouseX, mouseY,100, 100);
-  }
-  
+    
   //To RESET ALL changes
   if(key == '`'){
     fill(255,255,255);
     stroke(0,0,0);
   }
   
+  if(key == ']'){
+     println(colorValue); 
+    colorValue += 10;
+  } else if (key == '['){
+    println(colorValue);
+    colorValue -= 10;
+  }
+   
+}
+
+ 
+
+void draw(){
+  background(255);
   
+  float x = random(width);
+  float y = random(height);
+  float r = random(255);
+  float g = random(255);
+  float b = random(255);
+  float size = random(100);
+
+   
+   if(key == 's'){
+    rect(x, y, size, size);
+  } else if(key == 'e'){
+    ellipse(x, y, size, size);
+  }
   
 }
 
