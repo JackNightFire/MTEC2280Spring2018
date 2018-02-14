@@ -16,6 +16,8 @@ float x1Speed;
 float y1Speed;
 float bckgrndClr;
 
+float bgRed, bgGreen, bgBlue;
+
 void setup(){
   size(500, 500);
   //Initialize the variable in function, so it can work with setup() and globally with draw()
@@ -26,16 +28,23 @@ void setup(){
   xSpeed = random(2,5);
   ySpeed = random(2,5);
   
-  x1Speed = random (1,4);
-  y1Speed = random (1,4);
+  x1Speed = random (2, 5);
+  y1Speed = random (2, 5);
   
   bckgrndClr = 0;
+  
+  bgRed = 255;
+  bgBlue = 255;
+  bgGreen = 255;
 }
 
 
 
 void draw(){
-  background(bckgrndClr);
+  //background(bckgrndClr);
+  
+  background(bgRed, bgGreen, bgBlue);
+  
   //Change the x position.
   x = x + xSpeed;
   x1 = x1 + x1Speed;
@@ -94,12 +103,16 @@ void draw(){
   Change Background
   ==========*/
   if(x >= width || x1 >= width || x <= 0 || x1 <= 0){
-    bckgrndClr = random(255);
-    background(bckgrndClr, random(255), random(255)); 
+    //bckgrndClr = random(255);
+    //background(bckgrndClr, random(255), random(255)); 
+    
+    bgRed = random(255);
+    bgGreen = random(255);
+    bgBlue = random(255);
   } 
   if(y >= height || y1 >= height || y <= 0 || y1 <= 0){
-    bckgrndClr = random(255);
-    background(bckgrndClr, random(255), random(255)); 
+    //bckgrndClr = random(255);
+    //background(bckgrndClr, random(255), random(255)); 
   } 
   
   
