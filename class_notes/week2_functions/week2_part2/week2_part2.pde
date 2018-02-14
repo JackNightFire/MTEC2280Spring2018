@@ -5,7 +5,7 @@ void setup(){
   
   //frameRate is something that is running.
   
-  frameRate(10);
+  frameRate(random(20));
 }
 
 
@@ -32,6 +32,10 @@ void draw(){
   fill(r,g,b);
   
   ellipse(x, y, size,size);
+  
+  fill(g,b,r);
+  
+  rect(y, x, size, size);
   
   //rectMode() tells the browser to choose where the rectangle strats from.
   //rectMode (CENTER);
