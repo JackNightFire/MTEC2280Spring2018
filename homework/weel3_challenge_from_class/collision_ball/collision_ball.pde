@@ -1,3 +1,4 @@
+
 //1.Add another ball
 //2. Change the background with every collision
 //3.Change to a square/ellipse with every collision.
@@ -6,36 +7,41 @@
 //Global scope is when variable lies outside of a function.
 
 //Declare a variable globally and initialize it internally in a function.
-float x;
-float y;
-float xSpeed;
-float ySpeed;
-float x1;
-float y1;
-float x1Speed;
-float y1Speed;
+float x, y;
+float xSpeed, ySpeed;
+float x1, y1;
+float x1Speed, y1Speed;
 float bckgrndClr;
-
 float bgRed, bgGreen, bgBlue;
+float flRed, flGreen, flBlue;
+
 
 void setup(){
-  size(500, 500);
+  size(600, 600);
   //Initialize the variable in function, so it can work with setup() and globally with draw()
   x = width/2;
   y = height/2;
   x1 = 0;
   y1 = 0;
+  //Randomize the speeds of figures
   xSpeed = random(2,5);
   ySpeed = random(2,5);
   
   x1Speed = random (2, 5);
   y1Speed = random (2, 5);
   
+  //Set the initial values for colors of background and fills
   bckgrndClr = 0;
   
   bgRed = 255;
   bgBlue = 255;
   bgGreen = 255;
+  
+  flRed = 120;
+  flGreen = 120;
+  flBlue = 120;
+  
+  noStroke();
 }
 
 
@@ -52,9 +58,24 @@ void draw(){
   y = y + ySpeed;
   y1 = y1 + y1Speed;
   
-  /*===
+  /*======================================
+   Change Ball Color
+  =======================================*/
+  if(x >= width || x1 >= width || x <= 0 || x1 <= 0){
+    flRed = random(255);
+    flGreen = random(255);
+    flBlue = random(255);
+  } 
+  if(y >= height || y1 >= height || y <= 0 || y1 <= 0){
+    flRed = random(255);
+    flGreen = random(255);
+    flBlue = random(255);
+  } 
+  
+  
+  /*===============================
   BALL#1
-  =====*/
+  =================================*/
   //Collision on x - axis
   if(x >= width){
     //collision
@@ -74,11 +95,13 @@ void draw(){
     ySpeed = ySpeed * -1;
   }
   //First Ellipse
-  ellipse(x,y,20,20);
+  fill(flRed, flGreen, flBlue);
+  ellipse(x,y,50,50);
   
-  /*======
+  
+  /*===========================================
   BALL #2
-  =========*/
+  ============================================*/
   if(x1 >= width){
     //collision
     x1Speed = x1Speed * -1;
@@ -97,23 +120,24 @@ void draw(){
     y1Speed = y1Speed * -1;
   }
   //Second Ellipse
-  ellipse(x1, y1, 20, 20);
+  fill(flGreen, flBlue, flRed);
+  ellipse(x1, y1, 50, 50);
   
-  /*=========
-  Change Background
-  ==========*/
+  
+  /*===============================================
+  Change Background Color
+  ===============================================*/
   if(x >= width || x1 >= width || x <= 0 || x1 <= 0){
-    //bckgrndClr = random(255);
-    //background(bckgrndClr, random(255), random(255)); 
-    
     bgRed = random(255);
     bgGreen = random(255);
     bgBlue = random(255);
   } 
   if(y >= height || y1 >= height || y <= 0 || y1 <= 0){
-    //bckgrndClr = random(255);
-    //background(bckgrndClr, random(255), random(255)); 
+    bgRed = random(255);
+    bgGreen = random(255);
+    bgBlue = random(255);
   } 
+  
   
   
   
