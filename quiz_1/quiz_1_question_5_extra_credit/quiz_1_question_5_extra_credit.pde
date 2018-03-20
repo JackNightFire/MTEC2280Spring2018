@@ -1,40 +1,24 @@
+float circleD = 1;
+float circleSpeed = 5;
 
-
-int size = 1;
-int sizePr;
-int sizePt;
-boolean circExpan = false;
-boolean circShrin = false;
-
-void setup(){
-  size (500, 500);
+void setup() {
+  size(600,600);
 }
 
-void draw(){
+void draw() {
+  circleD = circleD + circleSpeed;
+  
+  // if circle grows too much
+  if(circleD > width) {
+    circleSpeed = circleSpeed * -1;
+  }
+  
+  // if circle shrinks too much
+  if(circleD < 0) {
+    circleSpeed = circleSpeed * -1;
+  }
+  
   background(0);
   
-  //Conditional to expand or decrease the size of the circle.
-  if(circExpan){
-     size++;
-   } 
-   if(circShrin){
-     size--;
-   } 
-   //Conditional to set  circExpan or circShrin to true or false;
-  if(size < width && size < height){
-    //if(  ){
-      
-    //} else if(){
-      
-    }
-  } 
-  
-  
-   
-   
-   
-  
-  ellipse(width/2, height/2, size, size);
-  println(size);
-  
+  ellipse(width/2,height/2,circleD,circleD);
 }
