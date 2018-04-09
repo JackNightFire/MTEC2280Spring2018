@@ -1,0 +1,18 @@
+random select LED
+ - you would need an array of LEDs
+ - then in setup(), there would be a loop 
+   that would create an OUTPUT for an array of lights
+ - in loop() turn all of them off by using a loop
+ - for randomize random use randomSeed(analogRead(0));
+ - LEDs 
+	- pinMode, digitalWrite
+ - delay, microSeconds(for sounds)
+ - arrays
+ - for loops & void loop()
+ - Serial monitor/ begin(9600) / println && print
+ - map value from to values
+ - speakers/ potentiometers
+ - breadboard
+ - wires
+ - resistors
+ - 
