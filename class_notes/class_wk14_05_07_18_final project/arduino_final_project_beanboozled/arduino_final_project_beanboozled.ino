@@ -4,19 +4,20 @@ Servo servoX;  // create servo object to control an X axis servo
 Servo servoY; // create servo object to control an Y axis servo
 Servo servo; // create servo object to control a claw servo
 
-int servoXPin = 5;  // what pins are our servos connected to?
-int servoYPin = 4;
-int servoClaw = 3;
-int analogXPin = A0;
-int analogYPin = A1;
-int anXRead = 0;
-int anYRead = 0;
+int servoXPin = 5;  //Digital pin for ServoX
+int servoYPin = 4; //Digital pin for ServoY
+int servoClaw = 3; //Digital pin for Servo claw
+int analogXPin = A0; //Horizontal Read from joystick
+int analogYPin = A1; //Vertical Read from joystick
+int anXRead = 0; //value from analog pin A0
+int anYRead = 0; //value from analog pin A1
 
 int posX = 0;    // variable to store the servo position
-int posY = 0;
-int posClaw = 0;
+int posY = 0;   //storing postion Y
+int posClaw = 0; //storing poistion Claw
 
-int previousX = 0;
+//Positions for smooting the values
+int previousX = 0; 
 int previousY = 0;
 
 //Button
@@ -54,7 +55,7 @@ void loop() {
   }
   
   if(counter == 0)
-    servo.write (0);  // zero degrees
+    servo.write (10);  // zero degrees
   if(counter == 1)
     servo.write(180);
   //else reset the counter to 0 which resets thr servo to 0 degrees
