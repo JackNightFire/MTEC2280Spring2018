@@ -26,7 +26,18 @@ https://www.tinkercad.com/things/ewp5qgSMhq9-fantabulous-esboo/editel
 Software:
 1. Create Servo objects.
 2. Read the values from potentiometers and assign them to variables.
-3. 
+3. Map those values from 0 to 1023 to desired degree i.e. from 0 to 180.
+4. Write those values to servo for sweep and span motion.
+5. Assign an int variable to a button.
+6. Read the values from digital input for a button.
+7. create a conditional for a state of a button, if button is LOW increment counter.
+8. create another variable stating the condition if counter as an argument
+9. write servo in that condition, if counter is 0, servo would be 0 degrees, i.e. closed, or counter = 1, servo is 180 degrees i.e. open.
+10.** if robot arm is shaky, create a smooth function. create a variables to hold previous reading and smooth reading. Smooth variable     will hold the sum of 10% of mapped value and 90% of previous value. The previous value would be declared after smooth val, and be equal ro it. 
+      int smoothVal  = (mappedVal * .1) + (previousVal * .9);
+      int previousVal = smoothVal;
+      
+      
 Authors
 Catherine Fernandez
 Oleg Ligay
