@@ -2,6 +2,8 @@ Project Title:
 Bean Boozled Assistant.
 Get a chance to combine Bean Boozled Jelly Beans & Claw machine. Enjoy the game with a little bit of robotics.
 
+Video:
+https://www.youtube.com/watch?v=-JNVjAtAIlg
 
 Getting Started:
 Hardware:
@@ -41,8 +43,8 @@ Software:
 Authors
 Catherine Fernandez
 Oleg Ligay
-
+Deanna Denman
 
 Acknowledgments
 Hat tip to anyone who used the code.
-
+Thanks to Grayson.
