@@ -1,14 +1,23 @@
-Project Title
+Project Title:
 Bean Boozled Assistant.
 Get a chance to combine Bean Boozled Jelly Beans & Claw machine. Enjoy the game with a little bit of robotics.
 
 
-Getting Started
-1. You need to install Arduino from www.arduino.cc
-2. 
+Getting Started:
+Hardware:
+1 - Arduino Uno Board
+3 - Servo motors
+ 1 - Joystick
+ 1 - Button
+ 1 - Claw
+ Wires
+ Rails for the arm
+ Platform to secure your arm
+ 
+ Software:
+Install arduino from arduino.cc and include Servo library
 
-Prerequisites
-What things you need to install the software and how to install them
+
 
 Give examples
 Installing
@@ -47,13 +56,13 @@ Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
+Catherine Fernandez
+Oleg Ligay
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+
+
 
 Acknowledgments
-Hat tip to anyone who's code was used
+Hat tip to anyone who used the code.
 Inspiration
 etc
