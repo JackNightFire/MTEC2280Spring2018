@@ -5,64 +5,32 @@ Get a chance to combine Bean Boozled Jelly Beans & Claw machine. Enjoy the game 
 
 Getting Started:
 Hardware:
-1 - Arduino Uno Board
-3 - Servo motors
- 1 - Joystick
- 1 - Button
- 1 - Claw
- Wires
- Rails for the arm
- Platform to secure your arm
+1 - Arduino Uno Board;
+3 - Servo motors;
+ 1 - Joystick;
+ 1 - Button;
+ 1 - Claw;
+ Wires;
+ Rails for the arm;
+ Platform to secure your arm.
  
  Software:
-Install arduino from arduino.cc and include Servo library
+Install Arduino from arduino.cc and include Servo library. The code that was used is attached to the folder.
 
+Installation:
+https://www.tinkercad.com/things/ewp5qgSMhq9-fantabulous-esboo/editel
+1. Connect servo motors to ground, 5V, and digital pins, i.e. 3, 4, 5.
+2. Connect joystick: VCC to 5V, GRND to ground, HORIZ to analog pin A0, VERT to analog pin A1
+3. Connect button: connect one lead to ground, another lead to digital pin 8 and 1kΩ resistor. Resistor connects to 3.3V.
 
-
-Give examples
-Installing
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
-
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
-
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-
+Software:
+1. Create Servo objects.
+2. Read the values from potentiometers and assign them to variables.
+3. 
 Authors
 Catherine Fernandez
 Oleg Ligay
 
-
-
-
 Acknowledgments
 Hat tip to anyone who used the code.
-Inspiration
-etc
+
